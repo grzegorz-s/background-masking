@@ -17,28 +17,10 @@
     0%   {
       border-color: rgba($white, .5);
     }
-    25%  {
-      border-color: rgba($white, .5);
-    }
     50%  {
       border-color: rgba($white, 1);
     }
     100% {
       border-color: rgba($white, .5);
-    }
-}
-
-@keyframes full-to-trans {
-    0%   {
-      border-color: rgba($white, 1);
-    }
-    25%  {
-      border-color: rgba($white, .5);
-    }
-    50%  {
-      border-color: rgba($white, .5);
-    }
-    100% {
-      border-color: rgba($white, 1);
     }
 }

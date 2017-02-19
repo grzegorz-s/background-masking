@@ -1,0 +1,31 @@
+.content__bg {
+  height: 600px;
+  overflow: hidden;
+
+  &--short {
+    height: 250px;
+  }
+
+  &--medium {
+    height: 430px;
+  }
+
+  &--posa {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+}
+
+.content__inner {
+  position: relative;
+  background: linear-gradient(to bottom, rgba($white, .8), $white 200px);
+}
+
+.content-hld {
+  top: -100px;
+  height: 1000px;
+  background: $white;
+  box-shadow: 1px 1px 30px 6px rgba($boxes-shadow-base, .35);
+}

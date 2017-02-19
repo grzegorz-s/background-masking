@@ -46,6 +46,7 @@
 .blocks-hld {
   width: 100%;
   padding: 180px 0 190px;
+  overflow: hidden;
 }
 
 .block--text {
@@ -67,4 +68,16 @@
 .block__img-hld {
   @include posa();
   overflow: hidden;
+}
+
+
+.two-blocks--text-right {
+  .block--text {
+    float: right;
+  }
+
+  .block--img {
+    right: auto;
+    left: 0;
+  }
 }

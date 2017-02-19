@@ -104,23 +104,39 @@
   &:nth-child(3) {
     border-color: rgba($white, .5);
     transition: transform ease-in .2s;
-    animation: trans-to-full 2s infinite;
 
     &::before {
       border-color: rgba($white, .5);
+    }
+  }
+
+  &:nth-child(1) {
+    animation: trans-to-full 2s infinite;
+    
+    &::before {
       animation: trans-to-full 2s infinite;
     }
   }
 
   &:nth-child(2) {
     top: 15px;
-    animation: full-to-trans 2s infinite;
+    animation: trans-to-full 2s infinite;
+    animation-delay: .5s;
+    
     &::before {
-      animation: full-to-trans 2s infinite;
+      animation: trans-to-full 2s infinite;
+      animation-delay: .5s;
     }
   }
 
   &:nth-child(3) {
     top: 30px;
+    animation: trans-to-full 2s infinite;
+    animation-delay: 1s;
+
+    &::before {
+      animation: trans-to-full 2s infinite;
+      animation-delay: 1s;
+    }
   }
 }
