@@ -1,0 +1,26 @@
+.site-top {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  height: 90px;
+  z-index: 10;
+  border-bottom: 1px solid rgba($white, .3);
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.nav__item {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+.nav__link {
+  font-size: $fz-1;
+  font-weight: $fw-l;
+  @include aliased();
+}

@@ -1,0 +1,26 @@
+@mixin posa() {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+@mixin aliased() {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+@keyframes trans-to-full {
+    0%   {
+      border-color: rgba($white, .5);
+    }
+    50%  {
+      border-color: rgba($white, 1);
+    }
+    100% {
+      border-color: rgba($white, .5);
+    }
+}
