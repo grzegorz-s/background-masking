@@ -19,6 +19,42 @@
   }
 }
 
+.bg__clipper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  clip: rect(auto,auto,auto,auto);
+  -webkit-clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
+  clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
+  overflow: hidden;
+
+  &.bg__image--white-gradient {
+    &::before {
+      z-index: 20;
+    }
+  }
+}
+
+_::-webkit-:-webkit-full-screen:host:not(:root:root), .safari_only {
+
+  .bg__clipper {
+    clip: auto;
+    -webkit-mask-image: -webkit-linear-gradient(top, #fff 0, #fff 100%);
+  }
+}
+
+
+.bg__image--fixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  // will-change: transform;
+}
+
 .bg__image--attachment-fixed {
   background-attachment: fixed;
   // width: 100vw;
