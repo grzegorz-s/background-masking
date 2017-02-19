@@ -1,0 +1,70 @@
+.section--two-blocks {
+  // height: 1000px;
+}
+
+.bg__image {
+  // position: absolute;
+  // top: 0;
+  // left: 0;
+  @include posa();
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.bg__image--white-gradient {
+  &::before {
+    content: '';
+    @include posa();
+    background: linear-gradient(to bottom, rgba($white, .8) 60%, $white 100%);
+  }
+}
+
+.bg__image--attachment-fixed {
+  background-attachment: fixed;
+  // width: 100vw;
+  // height: 100vh;
+}
+
+.bg__image--grayscale {
+  filter: grayscale(100%);
+}
+
+.bg__image--pattern {
+  &::before {
+    content: '';
+    @include posa();
+    background: rgba(#848484, .6);
+  }
+
+  &::after {
+    content: '';
+    @include posa();
+    background: url('/images/pattern.png');
+  }
+}
+
+.blocks-hld {
+  width: 100%;
+  padding: 180px 0 190px;
+}
+
+.block--text {
+  width: 62%;
+  padding-bottom: 62%;
+  position: relative;
+  box-shadow: 1px 1px 30px 6px rgba($boxes-shadow-base, .35);
+  z-index: 10;
+}
+
+.block--img {
+  position: absolute;
+  width: 47%;
+  padding-bottom: 47%;
+  bottom: 100px;
+  right: 0;
+}
+
+.block__img-hld {
+  @include posa();
+  overflow: hidden;
+}
