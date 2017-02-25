@@ -17,6 +17,10 @@
     @include posa();
     background: linear-gradient(to bottom, rgba($white, .8) 60%, $white 100%);
   }
+
+  .bg__image--abs {
+    z-index: -1;
+  }
 }
 
 .bg__clipper {
@@ -31,6 +35,7 @@
   overflow: hidden;
 
   &.bg__image--white-gradient {
+
     &::before {
       z-index: 20;
     }
@@ -104,6 +109,7 @@ _::-webkit-:-webkit-full-screen:host:not(:root:root), .safari_only {
   padding-bottom: 47%;
   bottom: 100px;
   right: 0;
+  overflow: hidden;
 }
 
 .block__img-hld {
