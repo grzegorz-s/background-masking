@@ -35,6 +35,11 @@
       z-index: 20;
     }
   }
+
+  .safari & {
+    clip: auto;
+    -webkit-mask-image: -webkit-linear-gradient(top, #fff 0, #fff 100%)
+  }
 }
 
 _::-webkit-:-webkit-full-screen:host:not(:root:root), .safari_only {
