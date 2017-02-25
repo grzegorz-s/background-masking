@@ -17,6 +17,52 @@
     @include posa();
     background: linear-gradient(to bottom, rgba($white, .8) 60%, $white 100%);
   }
+
+  .bg__image--abs {
+    z-index: -1;
+  }
+}
+
+.bg__clipper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  clip: rect(auto,auto,auto,auto);
+  -webkit-clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
+  clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
+  overflow: hidden;
+
+  &.bg__image--white-gradient {
+
+    &::before {
+      z-index: 20;
+    }
+  }
+
+  .safari & {
+    clip: auto;
+    -webkit-mask-image: -webkit-linear-gradient(top, #fff 0, #fff 100%)
+  }
+}
+
+_::-webkit-:-webkit-full-screen:host:not(:root:root), .safari_only {
+
+  .bg__clipper {
+    clip: auto;
+    -webkit-mask-image: -webkit-linear-gradient(top, #fff 0, #fff 100%);
+  }
+}
+
+
+.bg__image--fixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  // will-change: transform;
 }
 
 .bg__image--attachment-fixed {
@@ -63,6 +109,7 @@
   padding-bottom: 47%;
   bottom: 100px;
   right: 0;
+  overflow: hidden;
 }
 
 .block__img-hld {

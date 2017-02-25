@@ -1,0 +1,38 @@
+.bg__abs-hld,
+.bg__abs {
+ @include posa();
+}
+
+.bg__image--abs {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  min-height: 1100px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.bg__image--abs-left {
+  top: -180px;
+  left: calc(80% - 50vw);
+}
+
+.bg__image--abs--right {
+  top: calc(-63% - 100px);
+  left: calc(-50vw - 8%);
+}
+
+.bg__image--abs-right {
+  top: -180px;
+  left: calc(20% - 50vw);
+}
+
+.bg__image--abs--left {
+  top: calc(-63% - 100px);
+  left: calc(110% - 50vw);
+  // left: calc(100% - (50vw + 89px))
+}
